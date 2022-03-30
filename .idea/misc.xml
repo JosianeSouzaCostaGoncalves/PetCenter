@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Projetos/PetCenter/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1815" />
+        <entry key="..\:/Projetos/PetCenter/app/src/main/res/drawable/bg_border_register.xml" value="0.1305" />
+        <entry key="..\:/Projetos/PetCenter/app/src/main/res/drawable/ic_btn_floating.xml" value="0.1" />
+        <entry key="..\:/Projetos/PetCenter/app/src/main/res/drawable/ic_group.xml" value="0.1815" />
+        <entry key="..\:/Projetos/PetCenter/app/src/main/res/drawable/ic_home.xml" value="0.1815" />
+        <entry key="..\:/Projetos/PetCenter/app/src/main/res/drawable/ic_homes.xml" value="0.1815" />
+        <entry key="..\:/Projetos/PetCenter/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1815" />
+        <entry key="..\:/Projetos/PetCenter/app/src/main/res/drawable/ic_pawas.xml" value="0.1815" />
+        <entry key="..\:/Projetos/PetCenter/app/src/main/res/drawable/ic_pets.xml" value="0.1" />
+        <entry key="..\:/Projetos/PetCenter/app/src/main/res/layout/activity_main.xml" value="0.11203703703703703" />
+        <entry key="..\:/Projetos/PetCenter/app/src/main/res/layout/fragment_historic.xml" value="0.17831813576494426" />
+        <entry key="..\:/Projetos/PetCenter/app/src/main/res/layout/fragment_home.xml" value="0.33" />
+        <entry key="..\:/Projetos/PetCenter/app/src/main/res/layout/fragment_my_pets.xml" value="0.11203703703703703" />
+        <entry key="..\:/Projetos/PetCenter/app/src/main/res/layout/fragment_register.xml" value="0.25" />
+        <entry key="..\:/Projetos/PetCenter/app/src/main/res/mipmap-anydpi-v26/ic_home.xml" value="0.319" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

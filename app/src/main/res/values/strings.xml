@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">PetCenter</string>
+
+
+    ---------------Home-----------------
+    <string name="home_title">PetCenter</string>
+    <string name="home_nome">Nome:</string>
+
+
+    ---------------History-----------------
+    <string name="history_title">Olá Josiane</string>
+
+
+
+    ---------------Register-----------------
+
+    <string name="register_pet">Cadastrar Pet</string>
+    <string name="register_nome">Nome</string>
+    <string name="register_tip">Tipo</string>
+    <string name="register_breed">Raça</string>
+    <string name="register_birth_date">Data de Nascimento</string>
+
+
+</resources>
