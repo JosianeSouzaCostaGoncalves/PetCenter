@@ -1,11 +1,8 @@
 package com.example.petcenter.ui.activity.activity
 
 import android.os.Bundle
-import android.util.Log
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import com.example.petcenter.R
 import com.example.petcenter.database.AppDatabase
@@ -45,16 +42,9 @@ class RegisterFragment : Fragment(R.layout.fragment_register) {
             val dao = AppDatabase.instancia(requireContext())
             dao.petDao().salva(produtoPet)
 
-            Log.i(
-                "dbRegister", "produto" +
-                        " $produtoPet" +
-                        " banco de dados: ${dao.petDao().searchAll()}"
-            )
-
             Navigation.findNavController(view)
                 .navigate(R.id.action_registerFragment_to_historicFragment)
         }
-
 
     }
 }

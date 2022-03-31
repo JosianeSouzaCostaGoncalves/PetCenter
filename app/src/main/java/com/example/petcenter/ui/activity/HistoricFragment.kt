@@ -1,17 +1,12 @@
 package com.example.petcenter.ui.activity.activity
 
 import android.os.Bundle
-import android.util.Log
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import com.example.petcenter.R
-
 import com.example.petcenter.database.AppDatabase
 import com.example.petcenter.databinding.FragmentHistoricBinding
-import com.example.petcenter.databinding.FragmentHomeBinding
 import com.example.petcenter.ui.recyclerview.adapter.RegisterAdapter
 
 class HistoricFragment : Fragment(R.layout.fragment_historic) {

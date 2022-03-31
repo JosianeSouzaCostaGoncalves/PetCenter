@@ -7,7 +7,7 @@ import com.example.petcenter.model.Pet
 
 @Dao
 interface PetDao {
-    @Query("SELECT * FROM pet")
+    @Query("SELECT * FROM pet ORDER BY name")
     fun searchAll(): List<Pet>
 
     @Insert
