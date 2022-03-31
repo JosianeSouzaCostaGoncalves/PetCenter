@@ -14,26 +14,13 @@ import com.example.petcenter.ui.activity.activity.HistoricFragment
 class RegisterAdapter(
     val context: Context,
     pets: List<Pet> = emptyList(),
-    var quandoClicaNoItem: (pet: Pet) -> Unit = {}
 ) : RecyclerView.Adapter<RegisterAdapter.ViewHolder>() {
 
     private val pets = pets.toMutableList()
 
-    inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-
-        private lateinit var pet: Pet
-
-        init {
-            itemView.setOnClickListener {
-                if (::pet.isInitialized) {
-                    quandoClicaNoItem(pet)
-                }
-            }
-        }
-
+    class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
 
         fun vincula(pet: Pet) {
-            this.pet = pet
 
             val name = itemView.findViewById<TextView>(R.id.tvNamePet)
             name.text = pet.name

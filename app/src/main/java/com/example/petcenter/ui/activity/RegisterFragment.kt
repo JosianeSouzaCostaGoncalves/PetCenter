@@ -13,15 +13,9 @@ import com.example.petcenter.databinding.FragmentRegisterBinding
 import com.example.petcenter.model.Pet
 
 
-class RegisterFragment : Fragment() {
+class RegisterFragment : Fragment(R.layout.fragment_register) {
 
     private var fragmentRegisterFragment: FragmentRegisterBinding? = null
-
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? = inflater.inflate(R.layout.fragment_register, container, false)
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -51,9 +45,11 @@ class RegisterFragment : Fragment() {
             val dao = AppDatabase.instancia(requireContext())
             dao.petDao().salva(produtoPet)
 
-            Log.i("dbRegister", "produto" +
-                    " $produtoPet" +
-                    " banco de dados: ${dao.petDao().searchAll()}")
+            Log.i(
+                "dbRegister", "produto" +
+                        " $produtoPet" +
+                        " banco de dados: ${dao.petDao().searchAll()}"
+            )
 
             Navigation.findNavController(view)
                 .navigate(R.id.action_registerFragment_to_historicFragment)

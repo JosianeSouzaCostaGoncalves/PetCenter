@@ -12,15 +12,9 @@ import com.example.petcenter.R
 import com.example.petcenter.databinding.FragmentHistoricBinding
 import com.example.petcenter.databinding.FragmentHomeBinding
 
-class HomeFragment : Fragment() {
+class HomeFragment : Fragment(R.layout.fragment_home) {
 
     private var fragmentHomeBinding : FragmentHomeBinding? = null
-
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? = inflater.inflate(R.layout.fragment_home,container,false)
 
         override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
