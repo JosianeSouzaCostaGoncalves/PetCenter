@@ -1,17 +1,17 @@
 package com.example.petcenter.ui.activity.activity
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.Navigation
-import androidx.room.Room
 import com.example.petcenter.R
-import com.example.petcenter.dao.PetsDao
 import com.example.petcenter.database.AppDatabase
 import com.example.petcenter.databinding.FragmentRegisterBinding
 import com.example.petcenter.model.Pet
+
 
 class RegisterFragment : Fragment() {
 
@@ -41,7 +41,6 @@ class RegisterFragment : Fragment() {
             val campoDate = binding.etRegisterDate
             val date = campoDate.text.toString()
 
-
             val produtoPet = Pet(
                 name = nome,
                 tip = tip,
@@ -49,8 +48,12 @@ class RegisterFragment : Fragment() {
                 birthDate = date
             )
 
-            val dao = PetsDao()
-            dao.add(produtoPet)
+            val dao = AppDatabase.instancia(requireContext())
+            dao.petDao().salva(produtoPet)
+
+            Log.i("dbRegister", "produto" +
+                    " $produtoPet" +
+                    " banco de dados: ${dao.petDao().searchAll()}")
 
             Navigation.findNavController(view)
                 .navigate(R.id.action_registerFragment_to_historicFragment)

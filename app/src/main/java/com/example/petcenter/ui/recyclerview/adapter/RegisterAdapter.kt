@@ -13,13 +13,27 @@ import com.example.petcenter.ui.activity.activity.HistoricFragment
 
 class RegisterAdapter(
     val context: Context,
-    private val pets: List<Pet> = emptyList()
-
+    pets: List<Pet> = emptyList(),
+    var quandoClicaNoItem: (pet: Pet) -> Unit = {}
 ) : RecyclerView.Adapter<RegisterAdapter.ViewHolder>() {
 
-    class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+    private val pets = pets.toMutableList()
+
+    inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+
+        private lateinit var pet: Pet
+
+        init {
+            itemView.setOnClickListener {
+                if (::pet.isInitialized) {
+                    quandoClicaNoItem(pet)
+                }
+            }
+        }
+
 
         fun vincula(pet: Pet) {
+            this.pet = pet
 
             val name = itemView.findViewById<TextView>(R.id.tvNamePet)
             name.text = pet.name
@@ -52,10 +66,11 @@ class RegisterAdapter(
         return pets.size
     }
 
-//    fun atualiza(pets: List<Pet>){
-//        this.pets.clear()
-//        this.pets.addAll(pets)
-//        notifyDataSetChanged()
-//    }
+    fun atualiza(pets: List<Pet>) {
+        this.pets.clear()
+        this.pets.addAll(pets)
+        notifyDataSetChanged()
+    }
+
 
 }

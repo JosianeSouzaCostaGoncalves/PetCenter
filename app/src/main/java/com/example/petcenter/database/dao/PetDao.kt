@@ -8,7 +8,7 @@ import com.example.petcenter.model.Pet
 @Dao
 interface PetDao {
     @Query("SELECT * FROM pet")
-    fun addAll(): List<Pet>
+    fun searchAll(): List<Pet>
 
     @Insert
     fun salva(vararg pet: Pet)
