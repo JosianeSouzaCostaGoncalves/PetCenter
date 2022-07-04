@@ -5,10 +5,12 @@
     ---------------Home-----------------
     <string name="home_title">PetCenter</string>
     <string name="home_nome">Nome:</string>
-
+    <string name="home_password">Senha:</string>
+    <string name="home_register"><u>Cadastrar</u></string>
+    <string name="home_btn_entrar">Entrar</string>
 
     ---------------History-----------------
-    <string name="history_title">Olá Josiane</string>
+    <string name="history_title">Olá, %1$s!</string>
 
 
 
@@ -20,5 +22,12 @@
     <string name="register_breed">Raça</string>
     <string name="register_birth_date">Data de Nascimento</string>
 
+    ---------------Register-----------------
+
+
+    <string name="user_register_nome">Nome:</string>
+    <string name="user_register_password">Senha:</string>
+    <string name="user_register_confirm">Confirme a senha:</string>
+    <string name="user_register_btn_register">Cadastrar</string>
 
 </resources>

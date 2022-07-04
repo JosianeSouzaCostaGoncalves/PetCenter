@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".ui.activity.activity.HomeFragment">
+    tools:context=".ui.fragment.HomeFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -67,36 +67,65 @@
             app:layout_constraintTop_toBottomOf="@+id/constraintHome">
 
 
-            <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/tv_nome"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
-                android:text="@string/home_nome"
-                android:textSize="25sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/ti_nome"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/il_home_nome"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
                 android:layout_margin="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_nome" />
+                app:layout_constraintTop_toTopOf="@id/llHome">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_home_nome"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/home_nome"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/il_home_password"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/il_home_nome">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_home_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/home_password"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/tv_home_register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:textSize="16dp"
+                android:textColor="@color/pet_center"
+                android:text="@string/home_register"
+                android:layout_marginEnd="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/il_home_password"/>
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btn_entrar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="64dp"
+                android:layout_marginTop="24dp"
                 android:background="@color/pet_center"
-                android:text="Entrar"
+                android:text="@string/home_btn_entrar"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/ti_nome" />
+                app:layout_constraintTop_toBottomOf="@id/tv_home_register" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

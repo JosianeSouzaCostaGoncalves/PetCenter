@@ -1,4 +1,4 @@
-package com.example.petcenter.ui.recyclerview.adapter
+package com.example.petcenter.ui.utils.adapter
 
 import android.content.Context
 import android.util.Log
@@ -9,7 +9,6 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.petcenter.R
 import com.example.petcenter.model.Pet
-import com.example.petcenter.ui.activity.activity.HistoricFragment
 
 class RegisterAdapter(
     val context: Context,

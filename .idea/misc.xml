@@ -4,6 +4,8 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Projetos/PetCenter/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1815" />
+        <entry key="..\:/Projetos/PetCenter/app/src/main/res/drawable-v24/ic_pets_icone.xml" value="0.164" />
+        <entry key="..\:/Projetos/PetCenter/app/src/main/res/drawable-v24/pets_icone.xml" value="0.164" />
         <entry key="..\:/Projetos/PetCenter/app/src/main/res/drawable/bg_border_register.xml" value="0.1305" />
         <entry key="..\:/Projetos/PetCenter/app/src/main/res/drawable/ic_btn_floating.xml" value="0.1" />
         <entry key="..\:/Projetos/PetCenter/app/src/main/res/drawable/ic_group.xml" value="0.1815" />
@@ -14,10 +16,13 @@
         <entry key="..\:/Projetos/PetCenter/app/src/main/res/drawable/ic_pets.xml" value="0.1" />
         <entry key="..\:/Projetos/PetCenter/app/src/main/res/layout/activity_main.xml" value="0.11203703703703703" />
         <entry key="..\:/Projetos/PetCenter/app/src/main/res/layout/fragment_historic.xml" value="0.17831813576494426" />
-        <entry key="..\:/Projetos/PetCenter/app/src/main/res/layout/fragment_home.xml" value="0.33" />
+        <entry key="..\:/Projetos/PetCenter/app/src/main/res/layout/fragment_home.xml" value="0.18" />
         <entry key="..\:/Projetos/PetCenter/app/src/main/res/layout/fragment_my_pets.xml" value="0.11203703703703703" />
         <entry key="..\:/Projetos/PetCenter/app/src/main/res/layout/fragment_register.xml" value="0.25" />
+        <entry key="..\:/Projetos/PetCenter/app/src/main/res/layout/fragment_user_register.xml" value="0.36666666666666664" />
+        <entry key="..\:/Projetos/PetCenter/app/src/main/res/layout/teste.xml" value="0.36666666666666664" />
         <entry key="..\:/Projetos/PetCenter/app/src/main/res/mipmap-anydpi-v26/ic_home.xml" value="0.319" />
+        <entry key="..\:/Projetos/PetCenter/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.164" />
       </map>
     </option>
   </component>

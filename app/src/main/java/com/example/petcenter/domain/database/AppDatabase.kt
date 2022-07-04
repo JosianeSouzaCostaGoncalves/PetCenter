@@ -1,7 +1,6 @@
 package com.example.petcenter.database
 
 import android.content.Context
-import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
