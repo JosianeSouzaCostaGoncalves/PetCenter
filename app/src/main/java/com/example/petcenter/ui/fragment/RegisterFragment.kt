@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.DatePicker
 import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import com.example.petcenter.R
@@ -13,7 +14,7 @@ import com.example.petcenter.databinding.FragmentRegisterBinding
 import com.example.petcenter.model.Pet
 import java.util.*
 
-class RegisterFragment : Fragment() {
+class RegisterFragment : Fragment(), DatePickerDialog.OnDateSetListener {
 
     private var _binding: FragmentRegisterBinding? = null
     private val binding get() = _binding!!
@@ -36,7 +37,6 @@ class RegisterFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
 
         binding.btnRegisterSalvar.setOnClickListener {
             val campoName = binding.etRegisterNome
@@ -63,31 +63,19 @@ class RegisterFragment : Fragment() {
 
             Navigation.findNavController(view)
                 .navigate(R.id.action_registerFragment_to_historicFragment)
-
         }
         setDatePicker()
     }
 
     fun setDatePicker(){
-
-        val c = Calendar.getInstance()
-        val year = c.get(Calendar.YEAR)
-        val month = c.get(Calendar.MONTH)
-        val day = c.get(Calendar.DAY_OF_MONTH)
-
         binding.etRegisterDate.setOnClickListener {
-            val datePickerDialog = DatePickerDialog(
-                requireContext(),
-                DatePickerDialog.OnDateSetListener { view, mYear, mMonth, mDay ->
-                    binding.etRegisterDate.setText("" + mDay + "/" + mMonth + "/" + mYear)
-                },
-                year,
-                month,
-                day
-            )
-            datePickerDialog.show()
+            DatePickerFragment(this).show(childFragmentManager, DatePickerFragment.TAG)
         }
 
+    }
+
+    override fun onDateSet(view: DatePicker?, year: Int, month: Int, day: Int) {
+        binding.etRegisterDate.setText("" + day + "/" + month + "/" + year)
     }
 
 }
